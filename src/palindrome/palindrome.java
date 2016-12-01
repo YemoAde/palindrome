@@ -3,8 +3,8 @@ package palindrome;
 import java.util.Scanner;
 
 public class palindrome {
-	
-	public void check(String str){
+	static Scanner console = new Scanner(System.in);
+	public static void check(String str){
 		if(str==null||str.length()==1)
 		{
 			System.out.println("The string is not a palindrome");
@@ -22,12 +22,8 @@ public class palindrome {
 	}
 
 	public static void main(String[] args){
-		palindrome p=new palindrome();
-		Scanner s=new Scanner(System.in);
 		System.out.println("Enter a String to check for palindrome");
-		String str=s.nextLine();
+		String str=console.nextLine();
 		System.out.println("The string is "+str);
-		p.check(str);
-		
+		check(str);
 	}
-}
